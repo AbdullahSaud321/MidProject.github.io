@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    background-color: #14233f;
+}
+
+.contact .contact-info {
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .contact-info h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+}
+.contact .contact-info p {
+    font-weight: 300;
+    color: #103275;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container .contact-info-box{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contact-info-box .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container .contact-info-box .box .icon {
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container .contact-info-box .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.container .contact-info-box .box .text h3{
+    font-weight: 500;
+    color: #103275;
+}
+
+
+.contact-form {
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+}
+
+.contact-form h2 {
+    font-size: 30px;
+    color: #103275;
+    font-weight: 500;
+}
+
+.contact-form .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contact-form .inputBox input,
+.contact-form .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #103275;
+    outline: none;
+    resize: none;
+}
+
+.contact-form .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #103275;
+}
+
+.contact-form .inputBox input:focus ~ span,
+.contact-form .inputBox input:valid ~ span,
+.contact-form .inputBox textarea:focus ~ span,
+.contact-form .inputBox textarea:valid ~ span
+{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contact-form .inputBox input[type="submit"] {
+    width: 100px;
+    background: #103275;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+header {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:#0E1A32; 
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 0px 1px 0px whitesmoke;
+}
+
+header .logo {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .logo img{
+    width: 40px;
+    border-radius: 2px;
+}
+
+header .logo span {
+    display: block;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+header ul {
+    list-style: none;
+}
+header .main ul {
+    padding: 0;
+    margin: 0;
+}
+
+header .main ul li {
+    margin-top: 20px;
+}
+
+header .main {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-left: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+header .main li a {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    transition-duration: .3s;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+header .main li a:hover {
+    color: rgb(86, 86, 228);
+    background-color: whitesmoke;
+    color:#0E1A32;
+}
+
+header .main li {
+    position: relative;
+    width: 120px;
+}
+
+header .main li ul li {
+    display: none;
+    margin-top: 20px;
+    width: 200px;
+} 
+
+header .main li ul {
+    position: absolute;
+    min-height: 50px;
+    left:0;
+    transition-duration: .5s;
+}
+
+header .main li ul li a:hover {
+    color: rgb(86, 86, 228);
+}
+header .main li ul li::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -15px;
+    background-color: transparent;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent transparent rgb(86, 86, 228);
+    transition-duration: .5s;
+    transition-delay: .1s;
+
+
+}
+header .main li:hover ul li {
+    display: block;
+}
+
+header .feature {
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .feature .signin {
+    width: fit-content;
+    text-align: center;
+}
+
+header .feature .signin a p {
+    margin-top: 10px;
+    width: 100px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    transition-duration: .5s;
+    transition-delay: .1s;
+    text-align: center;
+}
+
+header .feature .signin a p:hover {
+    background-color: whitesmoke;
+    color:#0E1A32;
+}
+
+header .feature .darkmode {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 2px whitesmoke;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+header .feature .darkmode input {
+    opacity: 0;
+}
+header .feature .darkmode img {
+    position: absolute;
+    width: 30px;
+    transition: 1s;
+}
+
+header .feature .darkmode .sun {
+    transform: scale(0);
+}
+
+header .feature .darkmode .sun {
+    transform: scale(0);
+}
+
+header .feature .darkmode input:checked~ .moon {
+    transform: rotate(360deg) scale(0);
+}
+
+header .feature .darkmode input:checked~ .sun {
+    transform: scale(1) rotate(360deg);
+}
+
+header .feature .darkmode input:checked~ img {
+    transform: rotate(360deg) scale(0);
+}
+
+header .feature .darkmode .back {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition-duration: 1s;
+    z-index: -1;
+}
+
+header .feature .darkmode input:checked~ .back {
+    background-color: #f2f2f2;
+}
+
+.TCS{
+    font-weight: bold;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.TCS:hover{
+    color:rgb(116, 116, 246);
+
+}

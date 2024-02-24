@@ -1,0 +1,487 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: red;
+    background:linear-gradient(rgba(0,0,0,0.7) , rgba(0,0,0,0.9)) , url(../media/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    position: relative; 
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:#0E1A32; 
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 0px 1px 0px whitesmoke;
+}
+
+header .logo {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .logo img{
+    width: 40px;
+    border-radius: 2px;
+}
+
+header .logo span {
+    display: block;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+header ul {
+    list-style: none;
+}
+header .main ul {
+    padding: 0;
+    margin: 0;
+}
+
+header .main ul li {
+    margin-top: 20px;
+}
+
+header .main {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-left: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+header .main li a {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    transition-duration: .3s;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+header .main li a:hover {
+    color: rgb(86, 86, 228);
+    background-color: whitesmoke;
+    color:#0E1A32;
+}
+
+header .main li {
+    position: relative;
+    width: 120px;
+}
+
+header .main li ul li {
+    display: none;
+    margin-top: 20px;
+    width: 200px;
+} 
+
+header .main li ul {
+    position: absolute;
+    min-height: 50px;
+    left:0;
+    transition-duration: .5s;
+}
+
+header .main li ul li a:hover {
+    color: rgb(86, 86, 228);
+}
+header .main li ul li::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -15px;
+    background-color: transparent;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent transparent rgb(86, 86, 228);
+    transition-duration: .5s;
+    transition-delay: .1s;
+
+
+}
+header .main li:hover ul li {
+    display: block;
+}
+
+header .feature {
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .feature .signin {
+    width: fit-content;
+    text-align: center;
+}
+
+header .feature .signin a p {
+    margin-top: 10px;
+    width: 100px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    transition-duration: .5s;
+    transition-delay: .1s;
+    text-align: center;
+}
+
+header .feature .signin a p:hover {
+    background-color: whitesmoke;
+    color:#0E1A32;
+}
+
+header .feature .signin a p:hover {
+    background-color: whitesmoke;
+    color:#0E1A32;
+}
+
+
+header .feature .darkmode {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 2px whitesmoke;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+header .feature .darkmode input {
+    opacity: 0;
+}
+header .feature .darkmode img {
+    position: absolute;
+    width: 30px;
+    transition: 1s;
+}
+
+header .feature .darkmode .sun {
+    transform: scale(0);
+}
+
+header .feature .darkmode .sun {
+    transform: scale(0);
+}
+
+header .feature .darkmode input:checked~ .moon {
+    transform: rotate(360deg) scale(0);
+}
+
+header .feature .darkmode input:checked~ .sun {
+    transform: scale(1) rotate(360deg);
+}
+
+header .feature .darkmode input:checked~ img {
+    transform: rotate(360deg) scale(0);
+}
+
+header .feature .darkmode .back {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition-duration: 1s;
+    z-index: -1;
+}
+
+header .feature .darkmode input:checked~ .back {
+    background-color: #f2f2f2;
+}
+
+.midContent {
+    width: 50%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+}
+.content {
+    width: 500px;
+    padding: 20px;
+    margin-left: 10%;
+}
+
+.content .shortText h1 ,
+.content .shortText p{
+    color:white;
+}
+
+.content .shortText h2 {
+    color: rgb(116, 116, 246);
+}
+.content .shortText h1 {
+    font-size: 50px;
+}
+
+.content .shortText h2 {
+    margin-top: 5px;
+    font-size: 40px;
+    text-transform: capitalize;
+}
+
+.content .shortText p {
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.content .shortText p em {
+    color: rgb(116, 116, 246);;
+}
+
+.donationAndVolunteer {
+    width: 300px;
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+}
+.content .donation,
+.content .volunteer{
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.content .volunteer {
+    margin-left: 50px;
+}
+.content .donation a p,
+.content .volunteer a p {
+    width: 150px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 0px whitesmoke;
+    transition-duration: .5s;
+    transition-delay: .1s;
+}
+.content .donationAndVolunteer a p:hover {
+    background-color: whitesmoke;
+    color:#0E1A32;
+}
+
+#rightSpace {
+    width: 900px;
+    min-height: 60%;
+    position: absolute;
+    right: 90px;
+    top: 120px;
+    
+}
+
+#rightSpace #homeDiv,
+#rightSpace #educationDiv,
+#rightSpace #medicalDiv,
+#rightSpace #scholarDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    opacity: 0;
+    transition-duration: 2s;
+    z-index: 1;
+}
+
+#rightSpace #homeDiv .DivImg,
+#rightSpace #educationDiv .DivImg,
+#rightSpace #medicalDiv .DivImg,
+#rightSpace #scholarDiv .DivImg {
+    width: 50%;
+    height: 100%;
+}
+
+
+#rightSpace #homeDiv .DivImg img,
+#rightSpace #educationDiv .DivImg img,
+#rightSpace #medicalDiv .DivImg img,
+#rightSpace #scholarDiv .DivImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+}
+
+#rightSpace #homeDiv .DivText,
+#rightSpace #educationDiv .DivText,
+#rightSpace #medicalDiv .DivText,
+#rightSpace #scholarDiv .DivText {
+    width: 50%;
+    height: 100%;
+    background-color:#0E1A32;
+    text-align: center;
+    border-radius: 0 20px 20px 0;
+    position: relative;
+}
+
+#rightSpace #homeDiv .DivText h2,
+#rightSpace #educationDiv .DivText h2,
+#rightSpace #medicalDiv .DivText h2,
+#rightSpace #scholarDiv .DivText h2
+ {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color:rgb(215, 12, 12);
+    position: relative;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#rightSpace #homeDiv .DivText hr,
+#rightSpace #educationDiv .DivText hr,
+#rightSpace #medicalDiv .DivText hr,
+#rightSpace #scholarDiv .DivText hr{
+    width: 200px;
+    height: 2px;
+    margin: auto;
+    border: none;
+    background-color: whitesmoke;
+    margin-bottom: 5px;
+}
+#rightSpace #homeDiv .DivText p,
+#rightSpace #educationDiv .DivText p,
+#rightSpace #medicalDiv .DivText p,
+#rightSpace #scholarDiv .DivText p {
+    text-align: justify;
+    padding: 5px;
+    color: whitesmoke;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+#rightSpace #homeDiv .DivText .backBtn,
+#rightSpace #educationDiv .DivText .backBtn,
+#rightSpace #medicalDiv .DivText .backBtn,
+#rightSpace #scholarDiv .DivText .backBtn{
+    padding: 10px;
+    border-radius: 10px;
+    outline: 0;
+    border: 0;
+    color: whitesmoke;
+    background-color: transparent;
+    border: 1px solid white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition-duration: .5s;
+    margin: 20px auto;
+}
+
+#rightSpace #homeDiv .DivText .backBtn:hover{
+    background-color: white;
+    color: #0E1A32;
+}
+#rightSpace #educationDiv .DivText .backBtn:hover{
+    background-color: white;
+    color: #0E1A32;
+}
+#rightSpace #medicalDiv .DivText .backBtn:hover{
+    background-color: white;
+    color: #0E1A32;
+}
+#rightSpace #scholarDiv .DivText .backBtn:hover {
+    background-color: white;
+    color: #0E1A32;
+}
+
+.services {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.services .box {
+    width: 300px;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    transition: all .5s .1s;
+    border-radius: 20px;
+}
+
+.services .box:hover {
+    transform: translateY(-10px);
+}
+.services .box .image {
+    width: 30%;
+}
+
+.services .box .image img {
+    width: 90px;
+}
+.services .box .text {
+    width: 70%;
+    height: 100%;
+    text-align: center;
+}
+
+.text h2 {
+    margin-top: 30px;
+    font-size: 30px;
+    color: rgb(116, 116, 246);
+}
+
+.text p {
+    color: white;
+}
+
+.text button {
+    width: 80px;
+    border-radius: 50px;
+    padding: 5px;
+    margin-top: 3px;
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    font-weight: bold;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
+.text button:hover {
+    background-color: whitesmoke;
+    color: #0E1A32;
+}
+
+.TCS{
+    font-weight: bold;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.TCS:hover{
+    color:rgb(116, 116, 246);
+
+}

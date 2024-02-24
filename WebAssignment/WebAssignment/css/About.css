@@ -1,0 +1,444 @@
+
+body{
+    margin: 0px;
+    background-color: #14233f;
+    color: rgb(197, 186, 170);
+    cursor: default;
+    transition: 0.7s;
+    overflow-x: hidden;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*----Header-----*/
+header {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:#0E1A32; 
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 0px 1px 0px whitesmoke;
+}
+
+header .logo {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .logo img{
+    width: 40px;
+    border-radius: 2px;
+}
+
+header .logo span {
+    display: block;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+header ul {
+    list-style: none;
+}
+header .main ul {
+    padding: 0;
+    margin: 0;
+}
+
+header .main ul li {
+    margin-top: 20px;
+}
+
+header .main {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-left: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+header .main li a {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    transition-duration: .3s;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+header .main li a:hover {
+    color: rgb(86, 86, 228);
+    background-color: whitesmoke;
+    color:#0E1A32;
+    width: auto;
+}
+
+header .main li {
+    position: relative;
+    width: 120px;
+}
+
+ header .main li ul li {
+    display: none;
+    margin-top: 20px;
+    width: 200px;
+} 
+
+header .main li ul {
+    position: absolute;
+    min-height: 50px;
+    left:0;
+    transition-duration: .5s;
+    width: auto;
+}
+
+header .main li ul li a:hover {
+    color: rgb(86, 86, 228);
+    width: auto;
+}
+header .main li ul li::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -15px;
+    background-color: transparent;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent transparent rgb(86, 86, 228);
+    transition-duration: .5s;
+    transition-delay: .1s;
+    width: auto;
+
+
+}
+header .main li:hover ul li {
+    display: block;
+}
+
+header .feature {
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .feature .signin {
+    width: fit-content;
+    text-align: center;
+}
+
+header .feature .signin a p {
+    margin-top: 10px;
+    width: 100px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    transition-duration: .5s;
+    transition-delay: .1s;
+    text-align: center;
+}
+
+header .feature .signin a p:hover {
+    background-color: whitesmoke;
+    color:#0E1A32;
+}
+
+header .feature .darkmode {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 2px whitesmoke;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+header .feature .darkmode input {
+    opacity: 0;
+}
+header .feature .darkmode img {
+    position: absolute;
+    width: 30px;
+    transition: 1s;
+}
+
+header .feature .darkmode .sun {
+    transform: scale(0);
+}
+
+header .feature .darkmode .sun {
+    transform: scale(0);
+}
+
+header .feature .darkmode input:checked~ .moon {
+    transform: rotate(360deg) scale(0);
+}
+
+header .feature .darkmode input:checked~ .sun {
+    transform: scale(1) rotate(360deg);
+}
+
+header .feature .darkmode input:checked~ img {
+    transform: rotate(360deg) scale(0);
+}
+
+header .feature .darkmode .back {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition-duration: 1s;
+    z-index: -1;
+}
+
+header .feature .darkmode input:checked~ .back {
+    background-color: #f2f2f2;
+}
+/*-----lightmode-----*/
+.light-mode{
+    background-color: aliceblue;
+    color:#0a1324;
+    transition: 0.7s;
+}
+.light-mode header li a,.light-mode .container, .light-mode header .signin a p, .light-mode header .logo span{
+    color: #0a1324;
+    transition: 0.7s;
+}
+.light-mode header .feature .darkmode{
+    border: 1px #0a1324 solid;
+    transition: 0.7s;
+}
+.light-mode .container, .light-mode #aboutus li{
+    background-color: antiquewhite;
+    transition: 0.7s;
+}
+/*-------------------/
+
+/*----------------*/
+.container{
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    border: 2px solid #0a1324;
+    background-color: #0a1324;
+}
+h2{
+    padding-left: 30px;
+    text-align: center;
+    font-size: 50px;
+}
+/*About us section*/
+#aboutus{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:  nowrap;
+}
+#aboutus #text2{
+    width: 99%;
+    font-size: 22px;
+    text-align: center;
+}
+#aboutus #us{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#aboutus #us .slider .card h3{
+    font-size: 23px;
+}
+#aboutus #us .slider .card a:hover{
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+#aboutus #text2 em{
+    text-decoration: underline;
+    color: rgb(160, 27, 27);
+}
+.card .img img{
+    width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.slider{
+    max-width: 70%;
+}
+.slider i{
+    height: 40px;
+    width: 40px;
+    background-color: #f2f2f2;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+    color: #0a1324;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px;
+}
+.slider i:hover{
+    box-shadow: 0px 0px 26px rgb(160, 41, 41);
+}
+.slider i:first-child{
+    right: 5%;
+    top: 185px;
+}
+.slider i:last-child{
+    left: 100.5%;
+    top: -245px;
+}
+.slider #cards{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3)- 12px);
+    gap: 15px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+#cards .card{
+    list-style: none;
+    background: #0a1324;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.card img{
+    border: 2px solid;
+}
+/*About BUID section*/
+#aboutbuid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#aboutbuid #slideshow{
+    width: 50%;
+}
+#aboutbuid #text1{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;  
+    width: 49%;
+    justify-content: center;
+    align-items: center; 
+    padding-bottom: 90px;
+}
+#aboutbuid #text1 #links{
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid transparent;
+}
+#links{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+#links a img {
+    width: 50px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px black;
+    border: 1px solid transparent;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+}
+#links img{
+    position: relative;
+    left: 10%;
+}
+#links a span{
+    opacity: 0;
+    width: 60%;
+}
+#links a:hover span{
+    opacity: 1;
+    transition: 0.5s;
+}
+#links a:hover img{
+    left: 0%;
+    transition: 0.2s ease-in-out;
+}
+#links a{
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+#aboutbuid #text1 a img:hover{
+    filter: brightness(50%);
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+/*--------------------*/
+/*Buid auto slideshow*/
+#slideshow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 20px;
+}
+#slideshow #img{
+    width: 100%;
+    height: 550px;
+}
+#slideshow #checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+    height: 10%;
+}
+#slideshow #checkbox label{
+    border: 2px solid #f2f2f2;
+    border-radius: 15px;
+    width: 60px;
+    height: 13px;
+}
+#slideshow #checkbox label.active{
+    background-color: #f2f2f2;
+}
+#slideshow #img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#slideshow img{
+    width: 86%;
+    border-radius: 10px;
+    height: auto;
+}
+/*--------------------*/
+
+.TCS{
+    font-weight: bold;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.TCS:hover{
+    color:rgb(116, 116, 246);
+
+}
